@@ -2,18 +2,18 @@
 const qrContainer = document.getElementById("qrcode");
 
 if (!qrContainer) {
-  alert("QR container not found!");
+  console.error("QR container not found!");
 } else if (typeof QRCode === "undefined") {
-  qrContainer.innerHTML =
-    "<p style='color:#ff7777'>QR library not loaded. Check internet.</p>";
+  qrContainer.textContent =
+    "QR library not loaded. Please check your internet connection.";
 } else {
   qrContainer.innerHTML = "";
 
   new QRCode(qrContainer, {
-    text: "https://example.com",
-    width: 200,
-    height: 200,
-    colorDark: "#080d18",
+    text: "https://sidalimahieddine811-creator.github.io/social-links/",
+    width: 240,
+    height: 240,
+    colorDark: "#000000",
     colorLight: "#ffffff",
     correctLevel: QRCode.CorrectLevel.H
   });
