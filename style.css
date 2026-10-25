@@ -1,5 +1,6 @@
 
-/* ===== Mahieddine Links ===== */
+/* ===== Mahieddine Links - Premium Design ===== */
+
 * {
   box-sizing: border-box;
 }
@@ -11,306 +12,220 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: Arial, sans-serif;
-  color: #f8fafc;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f5f8ff;
   background:
     radial-gradient(
       circle at top,
-      #17365e 0%,
-      #0b1930 48%,
-      #050a13 100%
+      #18375e 0%,
+      #0d1b31 48%,
+      #050b16 100%
     );
 }
 
+/* Main container */
 .container {
-  width: min(100% - 32px, 650px);
+  width: 100%;
+  max-width: 760px;
   margin: 0 auto;
-  padding: 48px 0 36px;
+  padding: 30px 22px 50px;
   text-align: center;
 }
 
+/* Profile picture */
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto 24px;
+}
+
+.profile img {
+  display: block;
+  width: 145px;
+  height: 145px;
+  max-width: 45vw;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 4px solid #59b5ff;
+  box-shadow: 0 0 25px #2196f355;
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.profile img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px #39a9ff88;
+}
+
+/* Main title */
 h1 {
   margin: 12px 0;
-  font-size: clamp(2rem, 7vw, 3rem);
-  color: #55b5ff;
-  text-shadow: 0 0 22px #168bff35;
+  color: #59b5ff;
+  font-size: clamp(28px, 6vw, 44px);
+  font-weight: 800;
+  overflow-wrap: anywhere;
 }
 
 .container > p {
-  color: #b8c9e2;
-  font-size: 1.2rem;
-  margin-bottom: 32px;
+  margin: 16px 0 32px;
+  color: #b9cbe5;
+  font-size: clamp(17px, 4vw, 23px);
+  line-height: 1.6;
 }
 
 /* Social buttons */
-.container > a {
+.social-links {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
+  flex-direction: column;
+  gap: 15px;
   width: 100%;
-  min-height: 76px;
-  margin: 14px 0;
-  padding: 18px;
-  border: 1px solid #29476c;
-  border-radius: 24px;
-  background: rgba(17, 31, 51, 0.94);
-  color: #f8fafc;
-  font-size: 1.25rem;
-  text-decoration: none;
-  box-shadow: 0 5px 18px #00000015;
-  transition:
-    transform 0.2s ease,
-    background 0.25s ease,
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
+  margin: 25px auto;
 }
 
-/* Touch and click effect */
-.container > a:active {
+.social-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 72px;
+  padding: 17px;
+  border: 1px solid #294768;
+  border-radius: 22px;
+  background: #111f33;
+  color: #f5f8ff;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 600;
+  box-shadow: 0 5px 14px #00000018;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.social-btn i {
+  font-size: 26px;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+  background: #1a304d;
+  border-color: #59b5ff;
+  box-shadow: 0 8px 22px #2196f330;
+}
+
+/* Press animation for phones */
+.social-btn:active {
   transform: scale(0.96);
-  background: #203c5f;
-  border-color: #55b5ff;
-  box-shadow: 0 0 24px #168bff65;
+  background: #24476b;
+  box-shadow: 0 0 18px #59b5ff55;
 }
 
 /* Keyboard accessibility */
-.container > a:focus-visible {
-  outline: 3px solid #55b5ff;
+.social-btn:focus-visible {
+  outline: 3px solid #59b5ff;
   outline-offset: 4px;
 }
 
-/* Individual network colors */
-.container > a[href*="instagram.com"]:active {
-  border-color: #e879c8;
-  box-shadow: 0 0 24px #e1306c70;
+/* Optional social brand accents */
+.social-btn.instagram:hover {
+  border-color: #e1306c;
 }
 
-.container > a[href*="facebook.com"]:active {
-  border-color: #5597ff;
-  box-shadow: 0 0 24px #1877f270;
+.social-btn.facebook:hover {
+  border-color: #1877f2;
 }
 
-.container > a[href*="tiktok.com"]:active {
-  border-color: #50eee8;
-  box-shadow: 0 0 24px #25f4ee60;
+.social-btn.tiktok:hover {
+  border-color: #25f4ee;
 }
 
-.container > a[href*="wa.me"]:active {
-  border-color: #54e99a;
-  box-shadow: 0 0 24px #25d36665;
+.social-btn.whatsapp:hover {
+  border-color: #25d366;
 }
 
-.container > a[href*="snapchat.com"]:active {
-  border-color: #ffe45c;
-  box-shadow: 0 0 24px #fffc0055;
-}
-
-/* Hover effects for devices with a mouse */
-@media (hover: hover) {
-  .container > a:hover {
-    transform: translateY(-4px);
-    background: #182d49;
-    border-color: #55b5ff;
-    box-shadow: 0 10px 28px #168bff25;
-  }
-
-  .container > a[href*="instagram.com"]:hover {
-    border-color: #e879c8;
-    box-shadow: 0 10px 28px #e1306c30;
-  }
-
-  .container > a[href*="facebook.com"]:hover {
-    border-color: #5597ff;
-    box-shadow: 0 10px 28px #1877f230;
-  }
-
-  .container > a[href*="tiktok.com"]:hover {
-    border-color: #50eee8;
-    box-shadow: 0 10px 28px #25f4ee25;
-  }
-
-  .container > a[href*="wa.me"]:hover {
-    border-color: #54e99a;
-    box-shadow: 0 10px 28px #25d36630;
-  }
-
-  .container > a[href*="snapchat.com"]:hover {
-    border-color: #ffe45c;
-    box-shadow: 0 10px 28px #fffc0025;
-  }
+.social-btn.snapchat:hover {
+  border-color: #ffeb3b;
 }
 
 /* Footer */
 footer {
-  margin: 30px 0;
-  color: #8495ad;
+  margin: 30px 0 65px;
+  color: #8293ad;
+  font-size: 16px;
+  line-height: 1.7;
 }
 
 /* QR code section */
 .qr-section {
-  margin: 36px auto 0;
-  padding: 20px 0;
+  margin: 55px auto 20px;
   text-align: center;
 }
 
 .qr-section h2 {
-  font-size: 2rem;
-  color: #f8fafc;
+  margin-bottom: 18px;
+  font-size: clamp(27px, 6vw, 38px);
+  color: #f5f8ff;
 }
 
 .qr-section p {
-  color: #b8c9e2;
-  font-size: 1.1rem;
+  color: #b9cbe5;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
-#qrcode {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
-  margin: 24px auto;
-  overflow-wrap: anywhere;
-}
-
-#qrcode img,
-#qrcode canvas {
+.qr-section img {
   display: block;
-  max-width: 100%;
+  width: min(80%, 340px);
   height: auto;
-  border: 8px solid white;
-  border-radius: 12px;
-  box-shadow: 0 0 28px #168bff25;
-}
-
-/* Reduced motion accessibility */
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  .container > a {
-    transition: none;
-  }
-
-  .container > a:active,
-  .container > a:hover {
-    transform: none;
-  }
-}
-.social-links {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  width: 100%;
-  max-width: 500px;
-  margin: 30px auto;
-}
-
-.social-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 17px;
-  border: 1px solid #29486d;
-  border-radius: 18px;
-  background: #111f33;
-  color: #ffffff;
-  font-size: 19px;
-  text-decoration: none;
-  transition: 0.25s ease;
-}
-
-.social-btn i {
-  font-size: 24px;
-}
-
-.social-btn:hover,
-.social-btn:active {
-  background: #18375b;
-  border-color: #38a8ff;
-  transform: scale(1.02);
-.social-links {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  width: 100%;
-  max-width: 500px;
-  margin: 30px auto;
-}
-
-.social-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 17px;
-  border: 1px solid #29486d;
-  border-radius: 18px;
-  background: #111f33;
-  color: #ffffff;
-  font-size: 19px;
-  text-decoration: none;
-  transition: 0.25s ease;
-}
-
-.social-btn i {
-  font-size: 24px;
-}
-
-.social-btn:hover,
-.social-btn:active {
-  background: #18375b;
-  border-color: #38a8ff;
-  transform: scale(1.02);
-.social-links {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  width: 100%;
-  max-width: 500px;
-  margin: 30px auto;
-}
-
-.social-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 17px;
-  border: 1px solid #29486d;
-  border-radius: 18px;
-  background: #111f33;
-  color: #ffffff;
-  font-size: 19px;
-  text-decoration: none;
-  transition: 0.25s ease;
-}
-
-.social-btn i {
-  font-size: 24px;
-}
-
-.social-btn:hover,
-.social-btn:active {
-  background: #18375b;
-  border-color: #38a8ff;
-  transform: scale(1.02);
-  }
-.profile {
-  display: flex;
-  justify-content: center;
   margin: 25px auto;
+  padding: 10px;
+  background: #ffffff;
+  border: 3px solid #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 0 28px #59b5ff22;
 }
 
-.profile img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #38a8ff;
-  box-shadow: 0 0 25px rgba(56, 168, 255, 0.4);
+/* Responsive layout */
+@media (max-width: 480px) {
+  .container {
+    padding: 24px 18px 40px;
+  }
+
+  .profile img {
+    width: 125px;
+    height: 125px;
+  }
+
+  .social-links {
+    gap: 13px;
+  }
+
+  .social-btn {
+    min-height: 64px;
+    border-radius: 19px;
+    font-size: 19px;
+  }
+
+  .social-btn i {
+    font-size: 24px;
+  }
+
+  footer {
+    margin-bottom: 45px;
+  }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+} 
