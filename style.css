@@ -229,3 +229,27 @@ footer {
     transition: none !important;
   }
 } 
+/* Professional profile photo */
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto 30px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 4px solid #58b7ff;
+    box-shadow: 0 0 25px rgba(66, 165, 255, 0.4);
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px rgba(66, 165, 255, 0.7);
+}
